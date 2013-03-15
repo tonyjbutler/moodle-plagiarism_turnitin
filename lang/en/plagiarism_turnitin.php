@@ -61,6 +61,7 @@ $string['studentdisclosure'] = 'Student Disclosure';
 $string['studentdisclosure_help'] = 'This text will be displayed to all students on the file upload page.';
 $string['submitondraft'] = 'Submit file when first uploaded';
 $string['submitonfinal'] = 'Submit file when student sends for marking';
+$string['successfullysubmitted'] = 'However, please be assured that your file has been successfully submitted to Moodle.';
 $string['teacherlogin'] = 'Login to Turnitin as Teacher';
 $string['turnitindefaults'] = 'Turnitin Defaults';
 $string['turnitinerrors'] = 'Turnitin Errors';
