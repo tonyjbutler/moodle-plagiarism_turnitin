@@ -1403,11 +1403,14 @@ function turnitin_error_text($statuscode, $notify=true) {
         } else if ($statuscode < 100) { //don't return an error state for codes 0-99
             return '';
         } else if (($statuscode > 1006 && $statuscode < 1014) or ($statuscode > 1022 && $statuscode < 1025) or $statuscode == 1020) { //these are general errors that a could be useful to students.
-            $return = get_string('tiierror'.$statuscode, 'plagiarism_turnitin');
+            $return = get_string('tiierror'.$statuscode, 'plagiarism_turnitin').' '.
+                    get_string('successfullysubmitted', 'plagiarism_turnitin');
         } else if ($statuscode > 1024 && $statuscode < 2000) { //don't have documentation on the other 1000 series errors, so just display a general one.
-            $return = get_string('tiierrorpaperfail', 'plagiarism_turnitin').':'.$statuscode;
+            $return = get_string('tiierrorpaperfail', 'plagiarism_turnitin').':'.$statuscode.' '.
+                    get_string('successfullysubmitted', 'plagiarism_turnitin');
         } else if ($statuscode < 1025 || $statuscode > 2000) { // These are not errors that a student can make any sense out of.
-            $return = get_string('tiiconfigerror', 'plagiarism_turnitin').' ('.$statuscode.')';
+            $return = get_string('tiiconfigerror', 'plagiarism_turnitin').' ('.$statuscode.') '.
+                    get_string('successfullysubmitted', 'plagiarism_turnitin');
             if (has_capability('plagiarism/turnitin:enable', $PAGE->context)) {
                 $return .= html_writer::empty_tag('br');
                 $return .= get_string('errorlookup', 'plagiarism_turnitin');
