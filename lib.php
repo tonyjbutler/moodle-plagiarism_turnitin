@@ -1844,6 +1844,7 @@ function turnitin_get_form_elements($mform) {
 
     $mform->addElement('header', 'plagiarismdesc', get_string('pluginname', 'plagiarism_turnitin'));
     $mform->addElement('select', 'use_turnitin', get_string("useturnitin", "plagiarism_turnitin"), $ynoptions);
+    $mform->addHelpButton('use_turnitin', 'useturnitin', 'plagiarism_turnitin');
     $mform->addElement('select', 'plagiarism_show_student_score', get_string("showstudentsscore", "plagiarism_turnitin"), $tiishowoptions);
     $mform->addHelpButton('plagiarism_show_student_score', 'showstudentsscore', 'plagiarism_turnitin');
     $mform->addElement('select', 'plagiarism_show_student_report', get_string("showstudentsreport", "plagiarism_turnitin"), $tiishowoptions);
