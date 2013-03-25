@@ -102,6 +102,7 @@ $string['turnitin_attemptcodes_help'] = 'Error codes that Turnitin usually accep
 $string['turnitin_institutionnode'] = 'Enable Institution Node';
 $string['turnitin_institutionnode_help'] = 'If you have setup/purchased an institution node with your account enable this to allow the node to be selected when creating assignments. NOTE: if you do not have an institution node, enabling this setting will cause your paper submission to fail.';
 $string['useturnitin'] ='Enable Turnitin';
+$string['useturnitin_help'] ='Do not enable Turnitin unless you are expecting your students to submit text-based reports for this assignment. Accepted file types are doc, docx, htm, html, pdf, ps, rtf, txt and wpd; all other file types will be rejected by Turnitin and the student will be presented with an error message. Submissions must contain at least 20 words of text (not scanned) to be accepted.';
 $string['wordcount'] = 'Word count';
 $string['resubmit'] = 'Resubmit';
 $string['fileresubmitted'] = 'File Queued for resubmission';
